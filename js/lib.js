@@ -1,6 +1,6 @@
-function put_content(objectt,i){
+function put_content(jsondata,objectt,i){
     // 异步请求 JSON 数据
-    fetch("data.json").then(function(response){
+    fetch(jsondata).then(function(response){
         return response.json();
     
         }).then(function(data){
@@ -44,7 +44,7 @@ function put_content(objectt,i){
     
 
 //可以添加一个新的item区块
-function addItem(count) {
+function addItem(jsondata,count) {
     
     // 获取 main 区域的引用
     let mainArea = document.getElementById('main-content');
@@ -55,7 +55,7 @@ function addItem(count) {
     let newItem = ThisItem.cloneNode(true); //true 表示深拷贝所有后代节点;
     newItem.style.display = 'flex';//显示item
     //修改item
-    put_content(newItem,count);
+    put_content(jsondata,newItem,count);
     //console.log(newItem);
 
     // 将 item 元素添加到 main 区域中
