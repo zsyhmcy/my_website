@@ -1,0 +1,233 @@
+footer{
+    background-color: #231C1A;/*页尾的背景色*/
+    /*footer中字体颜色*/
+    color:aliceblue;
+    /*高宽*/
+    height: 80px;
+    width: 100%;
+    position:fixed;/*固定位置,无论用户如何滚动页面，该元素都会保持在那个位置不动。*/
+    bottom:0;
+    /*完美居中*/
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    /*确保该区块在最上层*/
+    z-index: 100;
+}
+
+header{
+    background-color: #231C1A;/*页首的背景色*/
+    /*固定高宽*/
+    height: 80px;
+    width: 100%;
+    position:fixed;/*固定位置,无论用户如何滚动页面，该元素都会保持在那个位置不动。*/
+    top:0;
+    /*确保该区块在最上层*/
+    z-index: 100;
+    /*让容器内的内容居中*/
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+
+/*标题*/
+header h1{   
+    color:aliceblue;
+    position:absolute;/*根据relative固定位置*/
+    left:30px;
+    /*无法选中*/
+    user-select: none;
+}
+
+/*nav标签*/
+nav{
+    display: flex;
+    position: fixed;
+    right: 30px;
+    font-size: 16px; /* 设置文字大小 */
+}
+
+.btn{
+    background-color: #333; /* 设置按钮背景颜色为深灰色 */
+    color: aliceblue;
+    padding: 10px 20px; /* 设置按钮内边距 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    font-size: 16px; /* 设置文字大小 */
+
+    user-select: none;/*文本无法选中*/
+    cursor: pointer; /* 鼠标悬停时显示手型 */
+    margin-left: 40px;
+}
+.btn:hover {
+    padding: 9px 19px; /* 设置按钮内边距 */
+    text-decoration:underline;
+}
+/*搜索*/
+.search{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.search:hover{
+    background-color: #333;
+    text-decoration:none;
+}
+#searchInput {
+    
+    flex: 1; /* 输入框自动填充剩余空间 */
+    background-color: #333; /* 设置按钮背景颜色为深灰色 */
+    color:aliceblue;
+    font-size: large;
+    outline: none;/*消除搜索框的边框*/
+}
+#searchButton {
+    color: aliceblue;
+    background-color: #333; /* 设置按钮背景颜色为深灰色 */
+    cursor: pointer;/* 鼠标悬停时显示手型 */
+    font-size: large;
+}
+/*按钮点击显示内容*/
+.btn-content{
+    position: fixed;
+    width: 20%;
+    top: 160px;
+    left:30px;
+}
+
+.btn-item{
+    color: gray;
+    font-size: larger;
+    text-align: center;
+    padding:2px;
+    margin: 5px;
+    border:3px dashed rgb(233, 241, 248);
+    width: 100%;
+    /*确保该区块在最中间层*/
+    z-index: 50;
+}
+.btn-image{
+    width: 50%;height: auto;user-select: none;border-radius: 50%;margin:10px
+}
+hr{
+    border: 1px solid lightgrey; margin:50px
+}
+
+#calssify,#column{
+    background-color:#F2F2F2;
+    font-size: 20px;
+}
+
+#calssify li, #column li{
+    margin-top: 3px;
+    display: block;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #fefefe;
+    cursor: pointer;/* 鼠标悬停时显示手型 */
+}
+#calssify li:hover,#column li:hover{
+    padding: 7px;
+}
+.main-image{
+    display:none;
+}
+
+
+
+/*手机排版*/
+@media (max-width:500px) {
+    header{
+        height: 125px;
+    }
+    /*标题*/
+    header h1{   
+        position:absolute;/*根据relative固定位置*/
+        left:10px;
+        font-size: 20px;
+    }
+
+    /*nav标签*/
+nav{
+    display: flex;
+    position: relative;
+    right:-75px;
+    font-size: 5px; /* 设置文字大小 */
+    top:-10%;
+}
+.btn{
+    position: relative;
+    top: 50%;
+    font-size: 10px; /* 设置文字大小 */
+    margin-left: 10px;
+    padding: 8px 18px; /* 设置按钮内边距 */
+}
+.btn:hover {
+    padding: 7px 17px; /* 设置按钮内边距 */
+}
+/*搜索*/
+.search{
+    position: absolute;
+    top:40px;
+    display: flex;
+    align-items: center;
+}
+.search:hover{
+    padding: 8px 18px; /* 设置按钮内边距 */
+}
+#searchInput {
+    
+    flex: 1; /* 输入框自动填充剩余空间 */
+    color:aliceblue;
+    font-size: 10px;
+}
+#searchButton {
+    color: aliceblue;
+    font-size: 10px;
+}
+
+
+/*按钮点击显示内容*/
+.btn-content{
+    position: fixed;
+    width: 100%;
+    left:0px;
+    top: 120px;
+}
+.btn-item{
+    border:0px;
+}
+
+hr{
+    border: 1px solid lightgrey; margin:10px
+}
+
+#person{
+    height: 25vh;
+    font-size: large;
+    position: relative;
+    background-color: #f9f9f9;
+}
+.btn-image{
+    width: 100px;height: 100px;user-select: none;
+    margin:5px;
+    position: relative;
+    left:0px;
+}
+.phone_image{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.main-image{
+    position: absolute;
+    display: flex;
+    z-index: 0;
+    width:30%;
+    height: auto;
+    top:180px;
+    user-select: none;border-radius: 50%;margin:10px;
+}
+
+
+}

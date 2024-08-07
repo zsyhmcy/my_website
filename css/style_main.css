@@ -1,0 +1,91 @@
+main{
+    background-color: #FFFFFF;
+    /*确保该区块在最底层*/
+    z-index: 0;
+    position: relative;/*便于子集定位*/
+    /*位置*/
+    top: 120px;
+    left: 25%;
+    margin-bottom: 20%;
+    /*长宽*/
+    width: 50vw;
+    overflow-y: auto; /* 添加滚动条，如果内容超出容器高度 */
+}
+
+.item {
+    position: relative;/*便于子集定位*/
+    display: none;/*通过js添加*/
+    margin: 10px; /* 控制间距 */
+    padding: 2px;
+    background-color:ghostwhite;
+    cursor: pointer;/* 鼠标悬停时显示手型 */
+}
+.item:hover{
+    padding: 0px;
+}
+.item-left {
+    flex: 1;/*占据1/4*/
+    margin: 10px; /* 控制间距 */
+}
+
+.item-left img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /*无法选中*/
+    user-select: none;
+    /* 防止长按后拖动 */
+    touch-action: none; 
+}
+
+.item-right {
+    flex: 3;/*占据3/4*/
+    padding: 10px;
+    color: rgb(55, 55, 55);
+}
+#item-content{
+    margin:5px;
+    padding-bottom:20px;
+    
+}
+
+.item-right sub {
+    margin:5px;
+    position:absolute;/*定位底部*/
+    bottom:10px;
+    font-size: 0.8em;
+    color: gray;
+    /*无法选中*/
+    user-select: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+/*手机排版*/
+@media (max-width:500px) {
+
+    main{
+        top: 400px;
+        margin-bottom: 50%;
+        width: 90%;
+        left:5%;
+    }
+    .item-left {
+        flex: 2;
+        display: flex;
+        align-items: center; /* 垂直居中对齐 */
+    }
+    .item-left img{
+        top:100px;
+    }
+    .item-right {
+        flex: 2;
+        font-size: 12px;
+    }
+}

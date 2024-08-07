@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hmcy个人网站(╯°□°)╯︵ ┻━┻</title>
+    <link rel="stylesheet" type="text/css" href="css\style_header_and_footer.css"/>
+    <link rel="stylesheet" type="text/css" href="css\style_main.css"/>
+    <style>*{border:0;padding:0;margin:0;}</style>
+     <!-- 导入模块文件 -->
+     <script type="module" src="./js/main.js"></script>
+</head>
+    <body id="body" style="background-color: rgb(248, 248, 248);" onclick="showContent(this)">
+        <!--页首-->
+        <header>
+            <h1>我的个人网站</h1>
+            <!--选择项-->
+            <nav>
+                <div
+                    class="btn" 
+                    onmousedown="downn(this);" 
+                    onmouseup="upp(this);" 
+                    onclick="showContent(this)"
+                >个人信息</div>
+                <div 
+                    class="btn" 
+                    onmousedown="downn(this);" 
+                    onmouseup="upp(this);" 
+                    onclick="showContent(this)"
+                >专栏目录</div>
+                <div 
+                    class="btn"
+                    onmousedown="downn(this);" 
+                    onmouseup="upp(this);" 
+                    onclick="showContent(this)"
+                >文章分类</div> 
+
+
+                <div class="btn-content">
+                    <div id="person" style="display: none;" class="btn-item">
+                        <img src="img\头像.jpg" alt="Image" class="btn-image">
+                        <h3>hmcy</h3>
+                        <hr/>
+                        <p>QQ:**********</p><!--2849743524-->
+                        <p>邮箱：*******@163.com</p>
+                        <hr/>
+                    </div>
+                    <div id="column" style="display: none;" class="btn-item">
+                        <h3>专栏目录</h3>
+                        <ul>
+                            <li>全部</li>
+                            <li>C语言</li>
+                            <li>C#</li>
+                            <li>cloudflare</li>
+                            <li>资讯</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    <div id="calssify" style="display: none;" class="btn-item">
+                        <h3>文章分类</h3>
+                       <ul>
+                            <li>全部</li>
+                            <li>csdn-自创</li>
+                            <li>csdn-搬运</li>
+                            <li>搬运</li>
+                            <li>...</li>
+                       </ul>
+                    </div>
+                </div>
+
+                <!--一个搜索按钮，搜索框取消记忆功能-->
+                <div class="btn search">
+                    <input type="text" id="searchInput" placeholder="输入搜索关键字" autocomplete="off">
+                    <button id="searchButton" onclick="getinput();">搜索</button>
+                </div>
+            </nav>
+        </header>
+        <div class="phone_image">
+            <img src="img\派大星.jpg" alt="Image" class="main-image"> 
+        </div>
+            
+        <main id="main-content">
+            
+            <div class="item">
+                <div class="item-left">
+                    <img/>
+                </div>
+                
+                <div class="item-right">
+                    <a href="html//test.html" id="a_content" target="_blank">
+                        <div id="item-content">
+                            <h3 id="title">lording...</h3>
+                            <p id="P-content">lording...</p>
+                        </div>
+                        <sub id="subb">lording...</sub>
+                    </a>
+                </div>
+            </div>
+        </main>
+        <div class="phone_image">
+            <img src="img\海绵宝宝.jpg" alt="Image" class="main-image" style="position: relative; margin-bottom:60%;"> 
+        </div>
+        <!--页尾-->
+        <footer>这是没添加的为了什么类似于联系方式预留的空间</footer>
+    </body>
+</html>
